@@ -23,6 +23,7 @@ function App() {
       </header>
 
       <main className="w-full bg-[#f9f1e4]">
+        <div>
           <h3 className="text-center text-8xl text-[#582d41] font-bold pt-24 pb-12">2026 Passes Are Sold Out</h3>
           <div className="flex justify-center space-x-12 uppercase text-2xl tracking-tighter pb-16">
             <button className="border-2 border-black rounded-xl bg-blue-200 p-3 shadow-[4px_4px_0_0_#000] transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#000]">
@@ -32,6 +33,21 @@ function App() {
               Join Waitlist W2
             </button>
           </div>
+          <div className="flex justify-center space-x-6 text-[#582d41] font-medium uppercase pb-20">
+            <a href="#" className="group flex items-center space-x-2">
+              <span className="border-b-2 border-black group-hover:border-orange-800">Bundle Hotel & Passes</span>
+              <span className="text-xl text-black">→</span>
+            </a>
+            <a href="#" className="group flex items-center space-x-2">
+              <span className="border-b-2 border-black group-hover:border-orange-800">Purchase Camping</span>
+              <span className="text-xl text-black">→</span>
+            </a>
+            <a href="#" className="group flex items-center space-x-2">
+              <span className="border-b-2 border-black group-hover:border-orange-800">View Pass Types</span>
+              <span className="text-xl text-black">→</span>
+            </a>
+          </div>
+        </div>
         <img src="/coachella-lineup.jpg" alt="Coachella Lineup Poster" className="max-w-6xl mx-auto rounded-lg" />
       </main>
       <footer></footer>
