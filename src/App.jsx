@@ -1,3 +1,5 @@
+import { FaFacebookF, FaInstagram, FaYoutube, FaDiscord, FaSnapchatGhost, FaTiktok, FaPinterestP } from "react-icons/fa";
+
 function App() {
 
   return (
@@ -50,7 +52,47 @@ function App() {
         </div>
         <img src="/coachella-lineup.jpg" alt="Coachella Lineup Poster" className="max-w-6xl mx-auto rounded-lg" />
       </main>
-      <footer></footer>
+      <footer className="w-full bg-[#f9f1e4] p-24">
+        <div className="grid grid-cols-5 gap-8">
+          <div className="flex flex-col space-y-4 col-span-2">
+            <div className="flex space-x-6">
+              <a href="#" className="uppercase font-bold">Coachella</a>
+              <a href="#" className="uppercase font-bold">Golden Voice</a>
+            </div >
+            <div className="flex space-x-4 text-4xl">
+              <a href="#"><FaFacebookF /></a>
+              <a href="#"><FaInstagram /></a>
+              <a href="#"><FaYoutube /></a>
+              <a href="#"><FaDiscord /></a>
+              <a href="#"><FaSnapchatGhost /></a>
+              <a href="#"><FaTiktok /></a>
+              <a href="#"><FaPinterestP /></a>
+            </div>
+            <p>© 2025 Goldenvoice</p>
+          </div>
+
+          <div className="flex flex-col space-y-8 font-medium">
+            <a href="#">Your Privacy Choices</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Festival Ticket Terms</a>
+            <a href="#">Contact</a>
+          </div>
+
+          <div className="flex flex-col space-y-8 font-medium">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Accessibility Statement</a>
+            <a href="#">Partners</a>
+            <a href="#">Health & Saftety</a>
+          </div>
+
+          <div className="flex flex-col space-y-8 font-medium">
+            <a href="#">California Privacy Notice</a>
+            <a href="#">Managae Cookies</a>
+            <a href="#">Accessibility / ADA</a>
+            <a href="#">Get The Newletter</a>
+          </div>
+        </div>
+      </footer>
     </>
   )
 }
