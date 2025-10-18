@@ -56,7 +56,10 @@ function App() {
           <div className="flex flex-col">
             <h3 className="text-5xl font-medium pb-6">Shuttles Make Getting Here Easy</h3>
             <p className="max-w-prose">The dedicated routes throughout the Valley provide safe, comfortable and reliable transportation with drop off / pick up just steps from the festival entrance.</p>
-            <a className="text-[#582d41] uppercase">Learn More</a>
+            <a className="text-[#582d41] font-medium uppercase flex items-center">
+              <span className="border-b-2 border-[#582d41]">Learn More</span>
+              <span className="text-2xl text-black px-2">→</span>
+            </a>
           </div>
         </div>
       </main>
