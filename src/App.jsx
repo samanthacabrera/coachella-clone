@@ -50,7 +50,15 @@ function App() {
             </a>
           </div>
         </div>
-        <img src="/coachella-lineup.jpg" alt="Coachella Lineup Poster" className="max-w-6xl mx-auto rounded-lg" />
+        <img src="/coachella-lineup.jpg" alt="photo of Coachella Lineup Poster" className="max-w-6xl mx-auto rounded-lg" />
+        <div className="flex items-center space-x-20 max-w-6xl mx-auto py-44">
+          <img src="/shuttle.png" alt="photo of shuttle" className="w-[25vw] h-[45vh]" />
+          <div className="flex flex-col">
+            <h3 className="text-5xl font-medium pb-6">Shuttles Make Getting Here Easy</h3>
+            <p className="max-w-prose">The dedicated routes throughout the Valley provide safe, comfortable and reliable transportation with drop off / pick up just steps from the festival entrance.</p>
+            <a className="text-[#582d41] uppercase">Learn More</a>
+          </div>
+        </div>
       </main>
       <footer className="w-full bg-[#f9f1e4] p-24">
         <div className="grid grid-cols-5 gap-8">
