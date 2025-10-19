@@ -73,6 +73,16 @@ function App() {
           </div>
           <img src="/payment.png" alt="photo of two people jumping" className="w-[35vw] h-[55vh]" />
         </div>
+        <div className="flex items-center space-x-40 max-w-6xl mx-auto py-44">
+          <img src="/hotel.png" alt="photo of two people jumping" className="w-[25vw] h-[45vh]" />
+          <div className="flex flex-col">
+            <h3 className="text-5xl font-medium pb-6">Hotels & Passes</h3>
+            <p className="max-w-xl">Bundle your festival passes with local resort accommodations and Coachella Shuttle transportation. Prices vary. Official Hotel Packages are on sale now for both Coachella weekends and sold exclusively through Valley Music Travel.</p>
+            <button className="border-2 border-black rounded-xl bg-orange-500 w-fit p-3 mt-4 text-xl uppercase shadow-[4px_4px_0_0_#000] transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#000]">
+              Purchase Now
+            </button>
+          </div>
+        </div>
       </main>
       <footer className="w-full bg-[#f9f1e4] p-24">
         <div className="grid grid-cols-5 gap-8">
