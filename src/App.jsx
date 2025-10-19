@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <header className="flex items-stretch justify-between w-full h-20 border border-black bg-[#ffedd3] uppercase tracking-widest font-sans text-sm md:text-base">
+      <header className="sticky top-0 z-50 flex items-stretch justify-between w-full h-20 border border-black bg-[#ffedd3] uppercase tracking-widest font-sans text-sm md:text-base">
         <div className="flex items-center w-full h-full">
           <h1 className="flex items-center justify-center w-72 h-full text-2xl border-r border-black">COACHELLA</h1>
           <h3 className="w-full pl-12 tracking-tighter font-medium">APR 10-12 & 17-19, 2026</h3>
@@ -51,16 +51,27 @@ function App() {
           </div>
         </div>
         <img src="/coachella-lineup.jpg" alt="photo of Coachella Lineup Poster" className="max-w-6xl mx-auto rounded-lg" />
-        <div className="flex items-center space-x-20 max-w-6xl mx-auto py-44">
-          <img src="/shuttle.png" alt="photo of shuttle" className="w-[25vw] h-[45vh]" />
+        <div className="flex items-center space-x-40 max-w-6xl mx-auto py-44">
+          <img src="/shuttle.png" alt="photo of shuttle" className="w-[35vw] h-[55vh]" />
           <div className="flex flex-col">
             <h3 className="text-5xl font-medium pb-6">Shuttles Make Getting Here Easy</h3>
-            <p className="max-w-prose">The dedicated routes throughout the Valley provide safe, comfortable and reliable transportation with drop off / pick up just steps from the festival entrance.</p>
+            <p className="max-w-xl">The dedicated routes throughout the Valley provide safe, comfortable and reliable transportation with drop off / pick up just steps from the festival entrance.</p>
             <a className="text-[#582d41] font-medium uppercase flex items-center">
               <span className="border-b-2 border-[#582d41]">Learn More</span>
               <span className="text-2xl text-black px-2">→</span>
             </a>
           </div>
+        </div>
+        <div className="flex items-center space-x-40 max-w-6xl mx-auto py-44">
+          <div className="flex flex-col">
+            <h3 className="text-5xl font-medium pb-6">Payment Plan</h3>
+            <p className="max-w-xl">More time to plan and more time to pay for your passes over time. Turn on the payment plan at checkout for your only chance to buy passes for $49 down and split the rest into equal monthly payment through February 2026.</p>
+            <a className="text-[#582d41] font-medium uppercase flex items-center">
+              <span className="border-b-2 border-[#582d41]">Learn More</span>
+              <span className="text-2xl text-black px-2">→</span>
+            </a>
+          </div>
+          <img src="/payment.png" alt="photo of two people jumping" className="w-[35vw] h-[55vh]" />
         </div>
       </main>
       <footer className="w-full bg-[#f9f1e4] p-24">
