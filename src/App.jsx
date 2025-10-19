@@ -83,7 +83,7 @@ function App() {
             </button>
           </div>
         </div>
-        <div className="flex items-center space-x-20 max-w-6xl mx-auto py-44">
+        <div className="flex items-center space-x-20 max-w-6xl mx-auto py-12">
           <div className="w-1/2 flex flex-col">
             <h3 className="text-4xl text-center font-medium pb-6">Go Behind The Scenes With <span className="uppercase">Arrival</span></h3>
             <p className="max-w-xl text-lg text-center">Shot in the lead-up to their Coachella performances, ARRIVAL goes inside 5 artists’ rehearsals, creative sessions, and personal moments to capture the energy, pressure, and purpose behind the stage.</p>
@@ -100,7 +100,10 @@ function App() {
           </div>
         </div>
       </main>
-      <footer className="w-full bg-[#f9f1e4] p-24">
+      <footer
+        className="w-full bg-[#f9f1e4] bg-cover bg-right p-24"
+        style={{ backgroundImage: "url('/footer-background.png')", backgroundPosition: "50% center", }}
+      >
         <div className="grid grid-cols-5 gap-8">
           <div className="flex flex-col space-y-4 col-span-2">
             <div className="flex space-x-6">
