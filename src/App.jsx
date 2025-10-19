@@ -83,6 +83,22 @@ function App() {
             </button>
           </div>
         </div>
+        <div className="flex items-center space-x-20 max-w-6xl mx-auto py-44">
+          <div className="w-1/2 flex flex-col">
+            <h3 className="text-4xl text-center font-medium pb-6">Go Behind The Scenes With <span className="uppercase">Arrival</span></h3>
+            <p className="max-w-xl text-lg text-center">Shot in the lead-up to their Coachella performances, ARRIVAL goes inside 5 artists’ rehearsals, creative sessions, and personal moments to capture the energy, pressure, and purpose behind the stage.</p>
+          </div>
+           <div className="w-1/2 aspect-video">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/Niiuprmot84?si=vu-BHHFfpcCysQLC"
+              title="Coachella Arrival Documentary"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
       </main>
       <footer className="w-full bg-[#f9f1e4] p-24">
         <div className="grid grid-cols-5 gap-8">
