@@ -1,6 +1,44 @@
+import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaDiscord, FaSnapchatGhost, FaTiktok, FaPinterestP } from "react-icons/fa";
 
 function App() {
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const dropdowns = {
+    Music: [
+      { label: "Lineup", href: "#" },
+      { label: "2025 YouTube Livestream", href: "#" },
+      { label: "Coachella: 20 Years In The Desert", href: "#" },
+      { label: "Past Festivals", href: "#" },
+    ],
+    Passes: [
+      { label: "2026 Pass Types", href: "#" },
+      { label: "2026 Sale Info", href: "#" },
+      { label: "2026 Amex® Passes", href: "#" },
+      { label: "2026 Hotel Packages", href: "#" },
+      { label: "2026 Waitlist", href: "#" },
+    ],
+    Plan: [
+      { label: "2025 Festival Info", href: "#" },
+      { label: "2025 Camping", href: "#" },
+      { label: "2025 Getting Here", href: "#" },
+      { label: "2025 Maps", href: "#" },
+      { label: "2025 Support & FAQ", href: "#" },
+      { label: "2025 Services", href: "#" },
+      { label: "2025 Accessibility / ADA", href: "#" },
+
+    ],
+    Experience: [
+      { label: "2025 Activities", href: "#" },
+      { label: "2025 Art", href: "#" },
+      { label: "2025 Eat & Drink", href: "#" },
+      { label: "2025 Coachella in Fortnite", href: "#" },
+      { label: "2025 Community", href: "#" },
+      { label: "2025 Mobile", href: "#" },
+      { label: "2025 Photo Gallery", href: "#" },
+      { label: "2025 Sustainability", href: "#" },
+    ],
+  };
 
   return (
     <>
@@ -10,13 +48,42 @@ function App() {
           <h3 className="w-full pl-12 tracking-tighter font-medium">APR 10-12 & 17-19, 2026</h3>
         </div>
 
-        <nav className="hidden md:flex items-center justify-end h-full w-full space-x-6 pr-12 tracking-tighter">
-          <a href="#">Music</a>
-          <a href="#">Passes</a>
-          <a href="#">Plan</a>
-          <a href="#">Experience</a>
-          <a href="#">Shop</a>
+        <nav
+          className="hidden md:flex items-center justify-end h-full w-full space-x-4 pr-12 tracking-tighter relative"
+          onMouseLeave={() => setActiveDropdown(null)}
+        >
+          {["Music", "Passes", "Plan", "Experience"].map((item) => (
+            <div
+              key={item}
+              className="relative group"
+              onMouseEnter={() => setActiveDropdown(item)}
+            >
+              <a href="#" className="relative z-10 px-2 py-1">
+                {item}
+              </a>
+              <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 ease-out" style={{ background: "#ffcba4", borderRadius: "60% 40% 50% 70% / 60% 40% 70% 50%", transform: "scale(1.2)", zIndex: 0, }}></span>
+            </div>
+          ))}
+
+          <a href="#" className="relative z-10 px-2 py-1">Shop</a>
           <a href="#" className="border-2 border-black rounded-xl bg-blue-200 p-2">Join Waitlist</a>
+
+          {activeDropdown && dropdowns[activeDropdown] && (
+            <div
+              className="fixed right-0 top-[5rem] w-screen bg-[#ffedd3] flex flex-col items-center justify-center uppercase text-lg tracking-tight z-40"
+              style={{ height: "70vh" }}
+            >
+              <ul className="space-y-4 font-medium">
+                {dropdowns[activeDropdown].map((link) => (
+                  <li key={link.label}>
+                    <a href={link.href} className="hover:underline">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </nav>
 
         <div className="flex items-center w-52 h-full hidden md:block border-l border-black">
