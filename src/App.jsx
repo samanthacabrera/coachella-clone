@@ -107,8 +107,8 @@ function App() {
         <div className="grid grid-cols-5 gap-8">
           <div className="flex flex-col space-y-4 col-span-2">
             <div className="flex space-x-6">
-              <a href="#" className="uppercase font-bold">Coachella</a>
-              <a href="#" className="uppercase font-bold">Golden Voice</a>
+              <img src="/coachella-logo.svg" alt="Coachella logo" className="" />
+              <img src="/goldenvoice-logo.svg" alt="Goldenvoice logo" className="" />
             </div >
             <div className="flex space-x-4 text-4xl">
               <a href="#"><FaFacebookF /></a>
