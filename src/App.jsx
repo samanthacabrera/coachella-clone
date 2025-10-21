@@ -44,7 +44,9 @@ function App() {
     <>
       <header className="sticky top-0 z-50 flex items-stretch justify-between w-full h-20 border border-black bg-[#ffedd3] uppercase tracking-widest font-sans text-sm md:text-base">
         <div className="flex items-center w-full h-full">
-          <h1 className="flex items-center justify-center w-72 h-full text-2xl border-r border-black">COACHELLA</h1>
+          <div className="flex items-center justify-center w-72 h-full text-2xl border-r border-black">
+            <img src="/coachella-logo.svg" alt="Coachella logo" className="" />
+          </div>
           <h3 className="w-full pl-12 tracking-tighter font-medium">APR 10-12 & 17-19, 2026</h3>
         </div>
 
@@ -52,28 +54,33 @@ function App() {
           className="hidden md:flex items-center justify-end h-full w-full space-x-4 pr-12 tracking-tighter relative"
           onMouseLeave={() => setActiveDropdown(null)}
         >
-          {["Music", "Passes", "Plan", "Experience"].map((item) => (
-            <div
-              key={item}
-              className="relative group"
-              onMouseEnter={() => setActiveDropdown(item)}
-            >
-              <a href="#" className="relative z-10 px-2 py-1">
-                {item}
-              </a>
-              <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 ease-out" style={{ background: "#ffcba4", borderRadius: "60% 40% 50% 70% / 60% 40% 70% 50%", transform: "scale(1.2)", zIndex: 0, }}></span>
-            </div>
-          ))}
-
+          {["Music", "Passes", "Plan", "Experience"].map((item, index) => {
+            const shapes = [
+              { borderRadius: "60% 40% 50% 70% / 60% 40% 70% 50%", transform: "scale(1.2, 2.1) rotate(-2deg)" },
+              { borderRadius: "55% 45% 65% 35% / 50% 60% 40% 70%", transform: "scale(1.3, 1.9) rotate(3deg)" },
+              { borderRadius: "70% 30% 60% 40% / 65% 35% 55% 45%", transform: "scale(1.25, 2) rotate(-4deg)" },
+              { borderRadius: "65% 35% 55% 45% / 70% 30% 60% 40%", transform: "scale(1.15, 1.8) rotate(2deg)" },
+            ];
+            const shape = shapes[index % shapes.length];
+            return (
+              <div
+                key={item}
+                className="relative group"
+                onMouseEnter={() => setActiveDropdown(item)}
+              >
+                <a href="#" className="relative z-10 px-2 py-1">{item}</a>
+                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 ease-out" style={{ background: "#ffcba4", borderRadius: shape.borderRadius, transform: shape.transform, zIndex: 0,}}></span>
+              </div>
+            );
+          })}
           <a href="#" className="relative z-10 px-2 py-1">Shop</a>
           <a href="#" className="border-2 border-black rounded-xl bg-blue-200 p-2">Join Waitlist</a>
-
           {activeDropdown && dropdowns[activeDropdown] && (
             <div
-              className="fixed right-0 top-[5rem] w-screen bg-[#ffedd3] flex flex-col items-center justify-center uppercase text-lg tracking-tight z-40"
+              className="fixed right-0 top-[5rem] w-screen bg-[#ffedd3] flex flex-col items-end uppercase text-xl tracking-tight z-40 pt-24 pr-24"
               style={{ height: "70vh" }}
             >
-              <ul className="space-y-4 font-medium">
+              <ul className="space-y-12 font-medium">
                 {dropdowns[activeDropdown].map((link) => (
                   <li key={link.label}>
                     <a href={link.href} className="hover:underline">
