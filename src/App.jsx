@@ -45,7 +45,7 @@ function App() {
       <header className="sticky top-0 z-50 flex items-stretch justify-between w-full h-20 border border-black bg-[#ffedd3] uppercase tracking-widest font-sans text-sm md:text-base">
         <div className="flex items-center w-full h-full">
           <div className="flex items-center justify-center w-72 h-full text-2xl border-r border-black">
-            <img src="/coachella-logo.svg" alt="Coachella logo" className="" />
+            <img src="/coachella-logo.svg" alt="Coachella logo" />
           </div>
           <h3 className="w-full pl-12 tracking-tighter font-medium">APR 10-12 & 17-19, 2026</h3>
         </div>
@@ -93,8 +93,8 @@ function App() {
           )}
         </nav>
 
-        <div className="flex items-center w-52 h-full hidden md:block border-l border-black">
-          <span className="flex items-center justify-center h-full transform scale-x-[-1] text-4xl">⌕</span>
+        <div className="flex items-center justify-center w-52 h-full hidden md:flex border-l border-black">
+          <img src="/search.svg" alt="search icon" className="w-5 h-5 object-contain" />
         </div>
       </header>
 
@@ -102,10 +102,10 @@ function App() {
         <div>
           <h3 className="text-center text-8xl text-[#582d41] font-bold pt-24 pb-12">2026 Passes Are Sold Out</h3>
           <div className="flex justify-center space-x-12 uppercase text-2xl tracking-tighter pb-16">
-            <button className="border-2 border-black rounded-xl bg-blue-200 p-3 shadow-[4px_4px_0_0_#000] transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#000]">
+            <button className="border-2 border-black rounded-xl bg-blue-200 p-3 shadow-[4px_4px_0_0_#000] transition-all duration-200 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0_0_#000]">
               Join Waitlist W1
             </button>
-            <button className="border-2 border-black rounded-xl bg-blue-200 p-3 shadow-[4px_4px_0_0_#000] transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#000]">
+            <button className="border-2 border-black rounded-xl bg-blue-200 p-3 shadow-[4px_4px_0_0_#000] transition-all duration-200 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0_0_#000]">
               Join Waitlist W2
             </button>
           </div>
@@ -152,7 +152,7 @@ function App() {
           <div className="flex flex-col">
             <h3 className="text-5xl font-medium pb-6">Hotels & Passes</h3>
             <p className="max-w-xl">Bundle your festival passes with local resort accommodations and Coachella Shuttle transportation. Prices vary. Official Hotel Packages are on sale now for both Coachella weekends and sold exclusively through Valley Music Travel.</p>
-            <button className="border-2 border-black rounded-xl bg-orange-500 w-fit p-3 mt-4 text-xl uppercase shadow-[4px_4px_0_0_#000] transition-all duration-200 hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#000]">
+            <button className="border-2 border-black rounded-xl bg-orange-500 w-fit p-3 mt-4 text-xl uppercase shadow-[4px_4px_0_0_#000] transition-all duration-200 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0_0_#000]">
               Purchase Now
             </button>
           </div>
