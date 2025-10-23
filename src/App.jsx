@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Background from "./Background";
 import { FaFacebookF, FaInstagram, FaYoutube, FaDiscord, FaSnapchatGhost, FaTiktok, FaPinterestP } from "react-icons/fa";
 
 function App() {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [hoveredOval, setHoveredOval] = useState(null);
 
   const dropdowns = {
     Music: [
@@ -43,7 +43,6 @@ function App() {
 
   return (
     <>
-      <Background />
       <header className="sticky top-0 z-50 flex items-stretch justify-between w-full h-20 border border-black bg-[#ffedd3] uppercase tracking-widest font-sans text-sm md:text-base">
         <div className="flex items-center w-full h-full">
           <div className="flex items-center justify-center w-72 h-full text-2xl border-r border-black">
@@ -99,6 +98,33 @@ function App() {
           <img src="/search.svg" alt="search icon" className="w-5 h-5 object-contain" />
         </div>
       </header>
+
+      <section className="absolute inset-0 z-0 pointer-events-none">
+        <div
+          className="absolute top-[10%] left-[5%] w-[55vw] h-[65vh] overflow-hidden pointer-events-auto transition-opacity duration-500"
+          style={{
+            clipPath: "ellipse(60% 50% at 50% 50%)",
+            opacity: hoveredOval === 1 ? 0 : 1,
+          }}
+          onMouseEnter={() => setHoveredOval(1)}
+          onMouseLeave={() => setHoveredOval(null)}
+        >
+          <img src="/oval1.png" alt="Oval 1" className="w-full h-full object-cover" />
+        </div>
+
+        <div
+          className="absolute top-[15%] left-[50%] w-[50vw] h-[60vh] overflow-hidden pointer-events-auto transition-opacity duration-500"
+          style={{
+            clipPath: "ellipse(60% 50% at 50% 50%)",
+            opacity: hoveredOval === 2 ? 0 : 1,
+          }}
+          onMouseEnter={() => setHoveredOval(2)}
+          onMouseLeave={() => setHoveredOval(null)}
+        >
+          <img src="/oval2.png" alt="Oval 2" className="w-full h-full object-cover" />
+        </div>
+      </section>
+
 
       <main className="w-full bg-transparent">
         <div>
