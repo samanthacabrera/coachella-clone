@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Background from "./Background";
 import { FaFacebookF, FaInstagram, FaYoutube, FaDiscord, FaSnapchatGhost, FaTiktok, FaPinterestP } from "react-icons/fa";
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <>
+      <Background />
       <header className="sticky top-0 z-50 flex items-stretch justify-between w-full h-20 border border-black bg-[#ffedd3] uppercase tracking-widest font-sans text-sm md:text-base">
         <div className="flex items-center w-full h-full">
           <div className="flex items-center justify-center w-72 h-full text-2xl border-r border-black">
@@ -98,7 +100,7 @@ function App() {
         </div>
       </header>
 
-      <main className="w-full bg-[#f9f1e4]">
+      <main className="w-full bg-transparent">
         <div>
           <h3 className="text-center text-8xl text-[#582d41] font-bold pt-24 pb-12">2026 Passes Are Sold Out</h3>
           <div className="flex justify-center space-x-12 uppercase text-2xl tracking-tighter pb-16">
